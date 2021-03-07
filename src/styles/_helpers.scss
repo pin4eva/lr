@@ -1,0 +1,92 @@
+$grid-count: 2 3 4 5 6;
+
+// Buttons
+.btn {
+  border-radius: 0.625rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.btn-sm {
+  padding: 0.1rem 0.5rem !important;
+}
+.btn-grad {
+  background: linear-gradient(
+    94.14deg,
+    #f30b0b -12.72%,
+    rgba(15, 11, 182, 0.92) 115.37%
+  );
+
+  color: $light;
+  font-weight: 500;
+}
+
+.font-monts {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-robo {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-great {
+  font-family: "Great Vibes", cursive;
+}
+
+// Text helpers
+.text-inherit {
+  color: inherit;
+}
+
+.c-hand {
+  cursor: pointer;
+  @include transition();
+}
+
+.font-thin {
+  font-weight: 200;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+
+  &-item {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@each $count in $grid-count {
+  .grid-#{$count} {
+    @extend .grid;
+    grid-template-columns: repeat($count, 1fr);
+    gap: 1rem;
+
+    @include media-md {
+      grid-template-columns: repeat($count - 2, 1fr);
+    }
+
+    @include media-sm {
+      grid-template-columns: auto;
+    }
+  }
+}
+
+// Form Input
+
+input,
+.form-control {
+  border-radius: 0;
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+  .transparent {
+    background-color: $transparent-primary;
+    color: $light;
+  }
+}

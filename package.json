@@ -1,0 +1,37 @@
+{
+  "name": "revival",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@glidejs/glide": "^3.4.1",
+    "bootstrap": "^4.6.0",
+    "next": "10.0.7",
+    "nprogress": "^0.2.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-reveal": "^1.2.2",
+    "react-slick": "^0.28.0",
+    "recoil": "^0.1.2",
+    "sass": "^1.32.8",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/glidejs__glide": "^3.4.0",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-slick": "^0.23.4",
+    "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
+    "typescript": "^4.2.2"
+  }
+}

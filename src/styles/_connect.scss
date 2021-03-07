@@ -1,0 +1,60 @@
+.connect-banner {
+  background: url("/images/pic6.png") no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 80vh 1fr;
+  // place-content: center;
+  // height: 100%;
+
+  .overlay {
+    background: radial-gradient(
+      23.68% 60.89% at 34.31% 49.94%,
+      rgba(0, 0, 0, 0) 5.27%,
+      rgba(0, 0, 0, 0.55) 81.2%
+    );
+    height: inherit;
+
+    &-inner {
+      display: flex;
+      // background-color: red;
+      // height: 100%;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-weight: 900;
+        color: $light;
+      }
+    }
+  }
+
+  .wrapper {
+    // margin-top: 2rem;
+
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .text-content {
+      color: white;
+      h4 {
+        margin-bottom: 1rem;
+      }
+    }
+    .btn {
+      padding: 0.5rem 2rem;
+      border-radius: 0;
+    }
+  }
+  .d-md-flex {
+    gap: 1.5rem;
+  }
+  .form-control {
+    background-color: $transparent-primary;
+    border: none;
+    color: white;
+    font-weight: 500;
+    &::placeholder {
+      color: white;
+    }
+  }
+}

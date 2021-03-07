@@ -1,0 +1,219 @@
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 4px;
+    text-transform: capitalize;
+  }
+  .line {
+    height: 3px;
+    width: 2rem;
+    background-color: black;
+  }
+}
+
+#home {
+  .banner {
+    background: url("/images/bg-1.png") no-repeat;
+    // background-position: center;
+    height: 80vh;
+    background-size: cover;
+
+    .overlay {
+      background: radial-gradient(
+        47.88% 123.12% at 63.82% 50%,
+        rgba(0, 0, 0, 0) 6.89%,
+        rgba(0, 0, 0, 0.53) 89.53%
+      );
+      height: inherit;
+      &-inner {
+        display: flex;
+        // background-color: red;
+        height: 70vh;
+        align-items: center;
+        // justify-content: center;
+        h1 {
+          font-weight: 900;
+          color: $light;
+        }
+      }
+    }
+  }
+
+  .intro {
+    .video1,
+    .video2 {
+      margin-top: 4rem;
+
+      img {
+        width: 100%;
+      }
+    }
+    position: relative;
+    .pattern1 {
+      background: url("/images/pattern1.svg") no-repeat;
+      height: 24.8rem;
+      width: 23rem;
+      position: absolute;
+      right: 0;
+      top: 20%;
+      z-index: -1;
+    }
+
+    .pattern2 {
+      background: url("/images/pattern2.svg") no-repeat;
+      @extend .pattern1;
+
+      left: 0;
+      top: 50%;
+    }
+    .aim {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      gap: 1rem;
+      display: grid;
+      @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .grid-item {
+      position: relative;
+      transition: all 0.8s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-20px);
+        // border-radius: 100%;
+      }
+    }
+  }
+
+  .testimonial {
+    position: relative;
+    margin-top: 2rem;
+    &-slider {
+      margin: 4rem 0;
+      // position: absolute;
+      // top: 25%;
+      .inner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        // max-width: 920px;
+        // margin: auto;
+        .wrapper {
+          display: flex;
+          img {
+            width: 100%;
+            max-width: 8rem;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .gallery {
+    &-slider {
+      margin-top: 3rem;
+      .inner {
+        display: flex;
+        justify-content: center;
+        .wrapper {
+          display: flex;
+          align-items: center;
+          &-main {
+            margin: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .team {
+    margin-top: 4rem;
+    .board-members {
+      margin-top: 2rem;
+      gap: 2rem;
+      grid-row-gap: 3rem;
+      .grid-item {
+        text-align: center;
+        position: relative;
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          max-width: 12rem;
+          height: 12rem;
+          border-radius: 100%;
+        }
+        &:hover {
+          .biocard {
+            display: block;
+            transition: 1s display ease-in-out;
+          }
+        }
+        .biocard {
+          transition: all 1s ease-in-out;
+          position: absolute;
+          bottom: 117%;
+          display: none;
+          // transition: 0.5s display ease-in-out;
+          .inner {
+            position: relative;
+            padding: 1rem;
+            color: white;
+
+            .outter {
+              width: 3rem;
+              height: 3rem;
+              background-color: inherit;
+              position: absolute;
+              bottom: 0;
+              left: 43%;
+              margin-bottom: -20px;
+              transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .podcast {
+    margin-bottom: 2rem;
+    &-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 20vh;
+      .line {
+        width: 2px;
+        height: inherit;
+        background-color: #fff;
+      }
+      .item {
+        color: $light;
+        p {
+          line-height: 1;
+        }
+        img {
+          width: 100%;
+          max-width: 6rem;
+          @media screen and (max-width: 768px) {
+            max-width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

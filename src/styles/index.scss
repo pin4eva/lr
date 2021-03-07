@@ -1,0 +1,39 @@
+// Variables
+@import "./variables";
+@import "./mixin";
+
+// Roboto
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+// Great Vibes
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+// Montserrat
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Font Awesome
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+// Header Nav
+@import "./header";
+
+// Footer
+@import "./footer";
+
+@import "./helpers";
+
+@import "./home";
+
+@import "./connect";
+
+*,
+html {
+  font-size: 14px;
+  @extend .font-monts;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}

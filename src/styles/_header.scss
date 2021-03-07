@@ -1,0 +1,123 @@
+#header {
+  @media screen and (min-width: 768px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    img {
+      width: 4rem;
+    }
+    .logo-text {
+      margin-left: 0.5rem;
+      p {
+        margin: 0;
+        line-height: 1.2;
+      }
+      .top {
+        span {
+          font-size: 0.8rem;
+        }
+        letter-spacing: 0.2rem;
+      }
+      .bottom {
+        letter-spacing: 0.2rem;
+        font-size: 0.8rem;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .front-nav {
+    background: linear-gradient(
+      269.99deg,
+      #000000 14.57%,
+      rgba(0, 0, 0, 0.928298) 51.44%,
+      rgba(0, 0, 0, 0.145493) 103.43%,
+      rgba(0, 0, 0, 0) 103.43%
+    );
+
+    ul.nav {
+      .get-involved {
+        .dropdown-menu {
+          border: 0;
+          background: #040404;
+
+          .nav-item {
+            border-bottom: 2px solid $light;
+            .nav-link {
+              &:active {
+                background: #494949;
+              }
+            }
+          }
+          &.show {
+            text-align: center;
+
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    position: relative;
+    .top-wrapper {
+      display: flex;
+    }
+
+    ul.nav {
+      display: none;
+      position: absolute;
+      background: rgba(15, 11, 182, 0.67);
+      width: 100vw;
+      top: 0;
+      height: 80vh;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+      .nav-item a {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      &.show {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .dropdown-menu {
+        display: none;
+        @include transition;
+        background-color: $primary;
+        &.show {
+          @include transition;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .desktop-nav {
+      display: flex;
+    }
+    .mobile-nav {
+      display: none;
+    }
+  }
+}
